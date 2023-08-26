@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anh Nguyen">
+    <meta name="email" content="nguy1011@algonquinlive.com">
+    <meta name="author" content="Anastasiia Makshanova">
+    <meta name="email" content="maks0019@algonquinlive.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b362d12309.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <title>Summer Planting</title>
+</head>
+
+<body>
+    <!-- section start -->
+
+    <div id="menu" class="main-menu landing">
+        <nav class="navbar">
+            <a href="index.html">
+                <h1 class="logo">Summer<span>Plant</span>ing</h1>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="houseplant.html">Houseplants</a></li>
+                    <li><a href="outdoorplant.html">Outdoorplant</a></li>
+                    <li><a href="potsanddecorations.html">Pots & decorations</a></li>
+                    <li><a href="plantcare.html">Plant care</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#search" class="menu_right"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><i id='cart' class="fa-solid fa-cart-shopping"></i></li>
+                    <li><button id="mode" onclick="darkmode()"><span id="dark_light"></span></button></li>
+                </ul>
+            </div>
+            <a href="#" class="toggle-button">
+                <i class="fa-solid fa-bars"></i></a>
+
+        </nav>
+    </div>
+
+    <!-- types of plants -->
+    <section class="plant">
+        <div class="main">
+            <img src="images/houseplant.jpg" alt="houseplant">
+            <div class="plant-text">
+                <h2>Houseplants</h2>
+                <p>The best indoor plants for every room in your house</p>
+                <a href="houseplant.html"><button type="button">Shop now</button></a>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="plant-text">
+                <h2>Outdoor plants</h2>
+                <p>Plants and flowers add vibrant color to outdoor</p>
+                <a href="outdoorplant.html"><button type="button">Shop now</button></a>
+
+            </div>
+            <img src="images/outdoorplant.jpg" alt="outdoorplant">
+        </div>
+
+        <div class="main">
+            <img src="images/WhitePlanter.jpg" alt="houseplant">
+            <div class="plant-text">
+                <h2>Pots & decorations</h2>
+                <p>The Best Indoor Plants for Every Room in Your House</p>
+                <a href="potsanddecorations.html"><button type="button">Shop now</button></a>
+
+            </div>
+        </div>
+
+        <div class="main">
+            <div class="plant-text">
+                <h2>Gifts</h2>
+                <p>Fantastic gifts for plant lovers</p>
+                <a href="gifts.html"><button type="button">Shop now</button></a>
+            </div>
+            <img src="images/planttogift.jpg" alt="houseplant">
+        </div>
+
+        <div class="main">
+            <img src="images/wateringplant.jpg" alt="houseplant">
+            <div class="plant-text">
+                <h2>Plant care</h2>
+                <p>The journey to keep plants alive!</p>
+                <a href="plantcare.html"><button type="button">Read more</button></a>
+            </div>
+        </div>
+    </section>
+
+    <div class="cart-modal">
+        <div class="inner-items">
+            <ul class="list">
+            </ul>
+            <div class="total-cost">
+                <span>In Total</span>
+                <span class="total-price"></span>
+                <input type="button" value="CLEAR ALL" id="delete-all" class="cart-button"
+                    onclick="deleteAll(event)"><br>
+                <hr>
+                <a href="checkout.html"><input type="button" value="Proceed to checkout" class="cart-button"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- source https://fontawesome.com/icons -->
+    <footer>
+        <div id="footer_container">
+            <div class="footer_item footer_left">
+                <h3>Stay updated</h3>
+                <div class="subscribe_text">Sign up with your email address to receive news and updates.</div>
+                <div class="subscribe">
+                    <form>
+                        <input type="email" name="email" id="mail" placeholder="Email address">
+                        <input type="submit" name="submit" value="Subscribe" class="switch" id="switch">
+                    </form>
+                </div>
+                <div class="subscribe_text">
+                    <a href="#FAQs">FAQs and Delivery </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#Policy">Privacy Policy </a>
+                </div>
+            </div>
+
+            <div class="footer_item footer_middle">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <br>
+                <a href="#menu"><i class="fa-solid fa-bars"></i></a>
+            </div>
+
+            <div class="footer_item footer_right">
+                <h3 id="contact">Contact</h3>
+                <address>
+                    259 Sunshine Street <br>
+                    Ottawa, Ontario <br>
+                    Call or Text: (844) 94P-LANT <br>
+                    <a href="mailto:help@summerplanting.ca?subject=Hi&body=Hello">
+                        help@summerplanting.ca </a>
+                </address>
+            </div>
+        </div>
+    </footer>
+    <script src="dark-mode.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

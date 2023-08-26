@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Anh Nguyen">
+    <meta name="email" content="nguy1011@algonquinlive.com">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b362d12309.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
+    <title>Summer Planting</title>
+</head>
+
+<body>
+    <!-- section start -->
+
+    <div id="menu" class="sub_page">
+        <nav class="navbar">
+            <a href="index.html">
+                <h1 class="logo">Summer<span>Plant</span>ing</h1>
+            </a>
+            <div class="navbar-links">
+                <ul>
+                    <li><a href="index.html"><i class="fa-solid fa-house"></i></a></li>
+                    <li><a href="houseplant.html">Houseplants</a></li>
+                    <li><a href="outdoorplant.html">Outdoorplant</a></li>
+                    <li><a href="potsanddecorations.html">Pots & decorations</a></li>
+                    <li><a href="plantcare.html">Plant care</a></li>
+                    <li><a href="gifts.html">Gifts</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="#search" class="menu_right"><i class="fa-solid fa-magnifying-glass"></i></a></li>
+                    <li><i id='cart' class="fa-solid fa-cart-shopping"></i></li>
+                    <li><button id="mode" onclick="darkmode()"><span id="dark_light"></span></button></li>
+                </ul>
+            </div>
+            <a href="#" class="toggle-button">
+                <i class="fa-solid fa-bars"></i></a>
+        </nav>
+    </div>
+
+    <h2 class="submenu">Outdoor<span>Plants</span></h2>
+
+
+    <!-- types of plants -->
+    <div id="plant_container">
+        <div class="plant_item">
+            <a href="plantinfo.html">
+                <img class="plant_image" src="images/118d1436591f--Pl-10in-Coconut-Palm-outdoor3.webp"
+                    alt="outdoorplant">
+                <div class="plant_title">
+                    Coconut palm
+                </div>
+            </a>
+            <div class="plant_price"> $ 76.99 </div>
+            <button type="button">Add to cart</button>
+        </div>
+
+        <div class="plant_item">
+            <a href="plantinfo.html">
+                <img class="plant_image" src="images/184f1ee05db4--pygmyDatePalm-outdoor2.webp" alt="outdoorplant">
+                <div class="plant_title">
+                    Pygmy data palm
+                </div>
+            </a>
+            <div class="plant_price"> $ 53.99 </div>
+            <button type="button">Add to cart</button>
+        </div>
+
+        <div class="plant_item">
+            <a href="plantinfo.html">
+                <img class="plant_image" src="images/837103a4acac--pl-UnknownCypress-outdoor4.webp" alt="outdoorplant">
+                <div class="plant_title">
+                    Cypress
+                </div>
+            </a>
+            <div class="plant_price"> $ 36.99 </div>
+            <button type="button">Add to cart</button>
+        </div>
+
+        <div class="plant_item">
+            <a href="plantinfo.html">
+                <img class="plant_image" src="images//2ccee7746fd4--pl-lady-palm-outdoor1.webp" alt="outdoorplant">
+                <div class="plant_title">
+                    Lady palm
+                </div>
+            </a>
+            <div class="plant_price"> $ 39.99 </div>
+            <button type="button">Add to cart</button>
+        </div>
+
+        <div class="plant_item">
+            <a href="plantinfo.html">
+                <img class="plant_image" src="images/80bea244a7be--pl-SunflowerSuncatcher-outdoor6.webp"
+                    alt="outdoorplant">
+                <div class="plant_title">
+                    Sunflower suncatcher
+                </div>
+            </a>
+            <div class="plant_price"> $ 65.99 </div>
+            <button type="button">Add to cart</button>
+        </div>
+
+        <div class="plant_item">
+            <a href="plantinfo.html">
+                <img class="plant_image" src="images/c3d103e7cf9c--pl-aquilegia-earlybird-outdoor5.webp"
+                    alt="outdoorplant">
+                <div class="plant_title">
+                    Aquilegia earlybird
+                </div>
+            </a>
+            <div class="plant_price"> $ 42.99 </div>
+            <button type="button">Add to cart</button>
+        </div>
+    </div>
+
+    <div class="cart-modal">
+        <div class="inner-items">
+            <ul class="list">
+            </ul>
+            <div class="total-cost">
+                <span>In Total</span>
+                <span class="total-price"></span>
+                <input type="button" value="CLEAR ALL" id="delete-all" class="cart-button"
+                    onclick="deleteAll(event)"><br>
+                <hr>
+                <a href="checkout.html"><input type="button" value="Proceed to checkout" class="cart-button"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <!-- source https://fontawesome.com/icons -->
+    <footer>
+        <div id="footer_container">
+            <div class="footer_item footer_left">
+                <h3>Stay updated</h3>
+                <div class="subscribe_text">Sign up with your email address to receive news and updates.</div>
+                <div class="subscribe">
+                    <form>
+                        <input type="email" name="email" id="mail" placeholder="Email address">
+                        <input type="submit" name="submit" value="Subscribe" class="switch" id="switch">
+                    </form>
+                </div>
+                <div class="subscribe_text">
+                    <a href="#FAQs">FAQs and Delivery </a>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <a href="#Policy">Privacy Policy </a>
+                </div>
+            </div>
+
+            <div class="footer_item footer_middle">
+                <h3>Follow us</h3>
+                <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <br>
+                <a href="#menu"><i class="fa-solid fa-bars"></i></a>
+            </div>
+
+            <div class="footer_item footer_right">
+                <h3 id="contact">Contact</h3>
+                <address>
+                    259 Sunshine Street <br>
+                    Ottawa, Ontario <br>
+                    Call or Text: (844) 94P-LANT <br>
+                    <a href="mailto:help@summerplanting.ca?subject=Hi&body=Hello">
+                        help@summerplanting.ca </a>
+                </address>
+            </div>
+        </div>
+    </footer>
+    <script src="dark-mode.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
